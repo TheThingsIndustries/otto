@@ -34,7 +34,7 @@ func TestGoMap(t *testing.T) {
 	tt(t, func() {
 		test, vm := test()
 		vm.Set("TestMap", GoMapTest{"one": 1, "two": 2, "three": 3})
-		is(test(`TestMap["one"]`).export(), 1)
-		is(test(`TestMap.Join()`).export(), "one: 1 three: 3 two: 2 ")
+		is(test(`TestMap["one"]`).export(0), 1)
+		is(test(`TestMap.Join()`).export(0), "one: 1 three: 3 two: 2 ")
 	})
 }

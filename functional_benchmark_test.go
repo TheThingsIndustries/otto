@@ -80,11 +80,11 @@ func testGoSliceSort(sortFuncCall string, sortCode string, t *testing.T) {
 		_, err = vm.Run(sortFuncCall)
 		is(err, nil)
 
-		is(test(`testSlice[0]`).export(), 1)
-		is(test(`testSlice[1]`).export(), 2)
-		is(test(`testSlice[2]`).export(), 3)
-		is(test(`testSlice[3]`).export(), 4)
-		is(test(`testSlice[4]`).export(), 5)
+		is(test(`testSlice[0]`).export(0), 1)
+		is(test(`testSlice[1]`).export(0), 2)
+		is(test(`testSlice[2]`).export(0), 3)
+		is(test(`testSlice[3]`).export(0), 4)
+		is(test(`testSlice[4]`).export(0), 5)
 
 		is(testSlice[0], 1)
 		is(testSlice[1], 2)
@@ -105,11 +105,11 @@ func testJsArraySort(sortFuncCall string, sortCode string, t *testing.T) {
 		_, err := vm.Run(sortFuncCall)
 		is(err, nil)
 
-		is(test(`testSlice[0]`).export(), 1)
-		is(test(`testSlice[1]`).export(), 2)
-		is(test(`testSlice[2]`).export(), 3)
-		is(test(`testSlice[3]`).export(), 4)
-		is(test(`testSlice[4]`).export(), 5)
+		is(test(`testSlice[0]`).export(0), 1)
+		is(test(`testSlice[1]`).export(0), 2)
+		is(test(`testSlice[2]`).export(0), 3)
+		is(test(`testSlice[3]`).export(0), 4)
+		is(test(`testSlice[4]`).export(0), 5)
 	})
 }
 
