@@ -869,7 +869,7 @@ func Test_goByteArrayWithMethods_typeof_S(t *testing.T) {
 	tt(t, func() {
 		test, vm := test()
 		vm.Set("a", a)
-		is(test("typeof a.S").export(), "function")
+		is(test("typeof a.S").export(0), "function")
 	})
 }
 
@@ -879,7 +879,7 @@ func Test_goByteArrayWithMethods_S(t *testing.T) {
 	tt(t, func() {
 		test, vm := test()
 		vm.Set("a", a)
-		is(test("a.S()").export(), "abcdefgh")
+		is(test("a.S()").export(0), "abcdefgh")
 	})
 }
 
@@ -889,7 +889,7 @@ func Test_goByteArrayWithMethods_F0(t *testing.T) {
 	tt(t, func() {
 		test, vm := test()
 		vm.Set("a", a)
-		is(test("a.F(0)").export(), 97)
+		is(test("a.F(0)").export(0), 97)
 	})
 }
 
@@ -899,6 +899,6 @@ func Test_goByteArrayWithMethods_F1(t *testing.T) {
 	tt(t, func() {
 		test, vm := test()
 		vm.Set("a", a)
-		is(test("a.F(1)").export(), 98)
+		is(test("a.F(1)").export(0), 98)
 	})
 }

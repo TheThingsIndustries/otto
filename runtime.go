@@ -334,7 +334,7 @@ func (self *_runtime) convertCallParameter(v Value, t reflect.Type) reflect.Valu
 	}
 
 	if t == typeOfJSONRawMessage {
-		if d, err := json.Marshal(v.export()); err == nil {
+		if d, err := json.Marshal(v.export(0)); err == nil {
 			return reflect.ValueOf(d)
 		}
 	}
